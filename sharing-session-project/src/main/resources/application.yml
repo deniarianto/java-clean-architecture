@@ -1,0 +1,31 @@
+server:
+  port: 8880
+
+
+
+spring:
+  data:
+    mongodb:
+      database: insurance
+      uri: mongodb://localhost:27017/tix_insurance
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    database: mysql
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        show-sql: false
+        format-sql: true
+        jdbc:
+          time-zone: UTC
+          lob:
+            non-contextual-creation: true
+        generate-statistics: true
+        globally-quoted-identifiers: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/insurance?useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password:
